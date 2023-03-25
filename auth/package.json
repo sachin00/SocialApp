@@ -44,7 +44,7 @@
     "ts-jest": "^29.0.5"
   },
   "lint-staged": {
-    "*.ts": [
+    "src/**/*.ts": [
       "npm run prettier:fix",
       "npm run lint",
       "npm run test",
