@@ -28,15 +28,15 @@ signUpRouter.post(
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      res.sendStatus(422);
+      return res.sendStatus(422);
     }
 
     if (/.+@[A-Z]/g.test(req.body.email)) {
-      res.sendStatus(422);
+      return res.sendStatus(422);
     }
 
     if (/[><'*/]/g.test(req.body.password)) {
-      res.sendStatus(422);
+      return res.sendStatus(422);
     }
 
     res.send({ email: req.body.email });
